@@ -1,0 +1,417 @@
+/* --- Inicio: Cambios para Centrar --- */
+
+/* Estilos para el contenedor principal del header */
+.header-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    /* justify-content: space-between; */ /* Quitamos o comentamos esto si queremos que el banner tenga más espacio para centrarse */
+    justify-content: center; /* O centramos todo el contenido del header */
+    gap: 50px; /* Añadimos un espacio entre el perfil y el banner */
+    padding: 20px; /* Espacio alrededor del contenedor */
+    flex-wrap: wrap; /* Permitir que los elementos pasen a la siguiente línea si no caben */
+}
+
+/* Estilos para el contenedor de la foto de perfil y el botón */
+.perfil-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Opcional: Si usaste justify-content: center en header-container,
+       quizás quieras darle un ancho fijo o máximo al perfil */
+    /* flex-shrink: 0; */ /* Evita que se encoja */
+}
+
+
+/*Ajusta el color del titulo del banner y lo centra*/
+
+
+
+.banner-bienvenida {
+    /* ... tus otros estilos ... */
+    color: rgb(56, 69, 112);
+    text-align: center;
+    padding: 20px;
+    flex-grow: 1;
+    min-width: 300px;
+    /* --- Añade estas dos líneas --- */
+    position: relative;
+    left: 140px; /* <-- Ajusta este valor negativo. Más negativo = más a la izquierda */
+    /* ------------------------------ */
+}
+
+/* Ajusta el contenedor del contenido del banner si es necesario */
+.banner-bienvenida {
+    color: rgb(56, 69, 112);
+    text-align: center;
+    padding: 20px;
+    flex-grow: 1;
+    min-width: 300px;
+
+    /* Centrado horizontal estable */
+    margin: 0 auto;
+    max-width: 950px; /* puedes ajustar este valor según tu diseño */
+}
+
+
+/* Estilos específicos para el H1 dentro del banner si es necesario */
+.banner-bienvenida .contenido-banner h1 {
+     margin-bottom: 0; /* Quitamos margen inferior si usamos gap en el contenedor */
+     display: flex; /* Hacemos el h1 flex para alinear texto y logo */
+     align-items: center; /* Alineamos verticalmente texto y logo */
+     gap: 10px; /* Espacio entre el texto/emoji y el logo */
+}
+
+
+/*ajusta la barra del input del banner*/
+.banner-bienvenida .contenido-banner input[type="text"] {
+    /* ... tus otros estilos ... */
+    padding: 12px 20px;
+    width: 90%;
+    max-width: 400px;
+    border: none;
+    box-shadow: 5px 5px 15px #ccae76;
+    font-size: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* --- Añade estas dos líneas --- */
+    position: relative;
+    left: -100px; /* <-- Ajusta este valor negativo para moverlo a la izquierda */
+    /* ------------------------------ */
+}
+/*ajusta el boton de seleccionar experto y lo centra */
+.boton-experto {
+    display: block; /* Hace que el enlace ocupe todo el ancho disponible y permite usar margin auto */
+    width: fit-content; /* Ajusta el ancho al contenido del botón */
+    margin: 5px auto 30px; /* 30px de margen arriba/abajo, 'auto' para centrar horizontalmente */
+    padding: 10px 16px;
+    font-size: 20px;
+    background-color: #01304a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    text-decoration: none; /* Quita el subrayado del enlace */
+    /* Se eliminan position: relative, margin-left y top */
+}
+
+.boton-experto:hover {
+    background-color: #b89556;
+}
+
+/* --- Fin: Cambios para Centrar --- */
+
+
+/* --- Mantenemos el resto de tu CSS aquí --- */
+:root {
+    --blanco: #ffffff;
+    --azul: #01304a;
+    --naranja: #f27f00;
+    --claro: #e2d9af;
+    --amarillo: #f8bb49;
+    --verde: #93dc93;
+    --palorosa: #eae7b1;
+    --fondo: #f5f1dd;
+}
+
+/*color de la pantalla */
+body {
+    background-color: #f5f1dd  ;
+    font-family: Arial, sans-serif;
+}
+
+.perfil-foto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*ajusta el tamaño de las imagenes y los bordes de los servicios*/
+.servicio img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/*ajusta la letra y el color que estan debajo de las imagenes de los servicios*/
+.servicio p {
+    font-size: 20px;
+    color: #8a7012;
+    text-align: justify;
+}
+
+/*Ajusta el color de los titulos h2 generales*/
+h2 {
+    color: #01304a;
+    margin-bottom: 1.5rem;
+}
+
+/*cuando uno pasa el cursor sobre los cuadros de servicio*/
+.tarjeta-servicio:hover {
+    transform: scale(1.01);
+}
+
+/*ajusta el tamaño y el color de los titulos de los servicios cercanos*/
+.info-izquierda h3 {
+    margin: 0;
+    color: #01304a;
+    font-size: 22px;
+}
+
+/*ajusta el tamaño de los cuadros de servicio cercanos*/
+.servicios-cerca {
+    width: 35%;
+    font-size: 18px;
+}
+
+/*ajusta los cuadros de servicio cercanos*/
+.tarjeta-servicio {
+    padding: 1.8rem;
+    box-shadow:  5px 5px 15px #ccae76;
+    margin-bottom: 20px;
+    color: #8a7012;
+    display: flex; /* Añadido para alinear info-izquierda e info-derecha */
+    justify-content: space-between; /* Espacio entre las columnas */
+    align-items: flex-start; /* Alinea al inicio */
+}
+
+/* Añadido: Ajuste para las columnas dentro de tarjeta-servicio */
+.tarjeta-servicio .info-izquierda,
+.tarjeta-servicio .info-derecha {
+    flex-basis: 48%; /* Ocupa casi la mitad, dejando espacio */
+}
+
+.tarjeta-servicio .info-derecha {
+    text-align: right; /* Alinea texto a la derecha */
+}
+
+
+/*ajusta el cuadro donde estas las imagenes de los servicios*/
+.servicios {
+    max-width: 1000px;
+}
+
+/*ajusta que las imagenes de los servicios queden del mismo tamaño*/
+.servicio {
+    width: 100%;
+}
+
+/*sirve al pasar el cursor sobre los cuadros de los servicios*/
+.servicio:hover {
+    transform: translateY(-5px);
+}
+
+/*ajusta el lugar de los cuadros de los servicios en toda la pantalla*/
+.contenido-principal {
+    display: flex;
+    justify-content: center;  /* Centra el contenido horizontalmente */
+    gap: 60px; /* Espacio entre columnas */
+    margin-top: 50px; /* Reducimos el margen superior un poco */
+    flex-wrap: wrap; /* Permitir que se envuelva en pantallas pequeñas */
+}
+
+/*sirve para que las imagenes queden al mismo tamaño y centradas enntre ellas de los servicios*/
+.servicios {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+}
+
+/*Ajusta el tamaño de cada cuadro de cada seccion de los servicios*/
+.servicio {
+    max-width: 100%;
+    background-color: #f5f1dd;
+    padding: 1.5rem;
+    box-shadow:  5px 5px 15px #ccae76;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* margin-bottom: 450px; */ /* Quitamos este margen inferior tan grande */
+    margin-bottom: 30px; /* Añadimos un margen inferior razonable */
+    flex: 1; /* Permite que los cuadros crezcan y ocupen espacio */
+    min-width: 250px; /* Ancho mínimo para cada servicio */
+
+}
+
+/* Ajustes para la foto de perfil */
+.perfil-foto {
+    width: 100px; /* Ajusta el tamaño según necesites */
+    height: 100px; /* Ajusta el tamaño según necesites */
+    border-radius: 50%; /* Para que sea circular */
+    object-fit: cover; /* Para que la imagen cubra el círculo sin deformarse */
+    margin-bottom: 5px; /* Espacio entre la foto y el nombre */
+}
+
+.perfil-nombre {
+    margin: 0;
+    color: #01304a;
+    font-size: 18px; /* Ajusta el tamaño del nombre */
+    text-align: center;
+}
+
+/*ajusta que los cuadros de servicios mas solicitados queden centrados */
+.servicios-grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: flex-start; */
+    justify-content: center; /* Centramos los cuadros */
+    gap: 40px;
+    margin-top: 10px;
+    /* margin-left: 800px; */ /* Quitamos el margen izquierdo fijo */
+    padding: 0 20px; /* Añadimos padding lateral para que no peguen a los bordes */
+}
+
+/*ajusta el tamaño de los cuadros de servicios mas solicitados */
+.servicio-cuadro {
+    padding: 30px;
+    width: 200px; /* Más ancho para el cuadro */
+    box-shadow:  5px 5px 15px #ccae76;
+    text-align: center;
+    background-color: var(--blanco); /* Añadir un fondo para que se vean mejor */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Suavizar hover */
+}
+
+/*sirve cada vez que uno pasa el cursor sobre los cuadros de servicios mas solicitados */
+.servicio-cuadro:hover {
+    transform: scale(1.05);
+    box-shadow:  8px 8px 20px #bba06a; /* Sombra más pronunciada */
+}
+
+/*sirve para que las imagenes queden centradas al texto en los cuadros de servicios mas solicitados */
+.servicio-cuadro img {
+    border-radius: 20px;
+    height: 150px; /* Ajustar altura si es necesario */
+    width: 100%; /* Hacer que la imagen ocupe el ancho */
+    object-fit: cover; /* Cambiar a cover para rellenar mejor */
+    margin-bottom: 15px; /* Espacio bajo la imagen */
+}
+
+/*sirve para el color de la letra en los cuadros de servicios mas solicitados */
+.servicio-cuadro h3 {
+    font-size: 22px;
+    margin: 0;
+    color: #01304a;
+}
+
+/*sirve para el titulo de los cuadros de servicios mas solicitados */
+.servicios-mas-solicitados {
+    width: 100%; /* Ocupar todo el ancho */
+    margin-top: 50px; /* Añadir espacio arriba */
+    margin-bottom: 50px; /* Añadir espacio abajo */
+}
+
+
+.servicios-mas-solicitados h2 {
+    font-size: 28px;
+    margin-bottom: 30px; /* Más espacio bajo el título */
+    color: #01304a;
+    text-align: center; /* Centramos el título */
+    /* margin-top: -370px; */  /* Quitamos el margen negativo */
+    /* margin-left: 1060px; */ /* Quitamos el margen izquierdo fijo */
+}
+
+/* Sección de los cuadros para queden uno al lado del otro */
+.seccion-servicios {
+   /* Quitar top y left si no se usan para posicionamiento absoluto/fijo */
+   padding: 40px 20px; /* Añadir padding */
+   background-color: var(--palorosa); /* Darle un fondo diferente si se quiere */
+   margin-bottom: 40px; /* Espacio debajo */
+}
+
+/* Contenedor de los tres cuadros de categorías */
+.categorias-servicios {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos */
+    gap: 40px; /* Espacio entre los cuadros */
+    flex-wrap: wrap; /* Permite que se ajusten en pantallas pequeñas */
+}
+
+/* Estilo individual de cada cuadro de categoría */
+.categoria {
+    background: #f5f1dd;
+    padding: 20px 25px;
+    box-shadow:  5px 5px 15px #ccae76;
+    text-align: center;
+    width: 350px;
+    border-radius: 10px; /* Añadir bordes redondeados */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Suavizar hover */
+}
+
+.categoria:hover{ /* Corregido: selector hover */
+    transform: scale(1.03); /* Efecto hover sutil */
+    box-shadow:  8px 8px 20px #bba06a;
+}
+
+/* Ajusta el titulo de los cuadros de categoría*/
+.categoria h3 {
+    color: #01304a;
+    margin-bottom: 16px;
+    font-size: 25px;
+}
+
+/* Ajusta el resto de la letra de los cuadros de categoría y espacios entre letras del titulo y subtitulo*/
+.categoria label {
+    display: block;
+    margin-bottom: 25px;
+    color: #01304a;
+    font-size: 20px;
+}
+
+/* Ajusta el input al oprimir para buscar el servicio , cambia que grande tiene que quedar la letra de los selectores de categoría*/
+.categoria select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #01304a; /* Grosor de borde reducido */
+    font-size: 17px;
+    margin-bottom: 15px;
+    border-radius: 5px; /* Redondear bordes */
+    background-color: var(--blanco);
+}
+
+/* Ajusta todo lo que tiene que ver con el boton de los selectores de categoría*/
+.categoria button {
+    background-color: #003049;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    border-radius: 5px; /* Redondear bordes */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.categoria button:hover {
+    background-color: #f27f00; /* Naranja en hover */
+}
+
+/* Ajusta el mensaje si ya esta cancelado o pendiente */
+.estado {
+    display: inline-block; /* Cambiado a inline-block */
+    padding: 5px 15px; /* Añadido padding */
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px; /* Tamaño de fuente reducido */
+    text-align: center;
+    /* margin-top: 30px; */ /* Quitado margen superior, se ajustará en info-derecha */
+    margin-top: 10px; /* Añadir un poco de margen */
+}
+
+.estado.finalizado {
+    color: #ffffff;
+    background-color: #28a745; /* Verde para finalizado */
+}
+
+.estado.pendiente {
+    color: #212529;
+    background-color: #ffc107; /* Amarillo para pendiente */
+}
+
+.estado.solicitar { /* Asumiendo que 'solicitar' es como 'Aceptado' o 'Confirmado' */
+    color: #ffffff;
+    background-color: #007bff; /* Azul para aceptado/solicitado */
+}

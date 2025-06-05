@@ -1,0 +1,100 @@
+.h2 {
+    text-align: center;
+}
+.bajada-logo {
+    margin-top: 150px; /* Ajusta este valor para bajar la imagen más o menos */
+    margin-left: 200px; 
+    opacity: 0.4;  
+}
+
+/* Contenedor de la imagen */
+.image-container {
+    position: relative; /* Necesario para la posición absoluta del texto */
+    width: 600px; /* Tamaño de la imagen */
+    height: auto; /* Altura automática ajustada al tamaño de la imagen */
+}
+
+.bajada-logo {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    transition: opacity 0.3s ease; /* Transición suave al hacer hover */
+}
+
+  /* Texto que se mostrará al pasar el cursor */
+.overlay-text {
+    position: fixed; /* Fijo para que aparezca en toda la pantalla */
+    top: 20%; /* Posición más arriba en la pantalla */
+    right: 41%; /* Mueve el texto más a la derecha de la pantalla */
+    
+    width: 300px; /* Ancho fijo del cuadro de texto */
+    height: auto; /* Altura automática según contenido */
+    padding: 20px;
+    
+    color: #01304a; /* Color del texto */
+    font-size: 20px; /* Tamaño de fuente */
+    font-weight: bold; /* Estilo en negrita */
+    text-align: center; /* Centra el texto */
+    
+    background-color: #f8bb49; /* Color de fondo */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para mejor visualización */
+    
+    opacity: 0; /* Inicialmente oculto */
+    visibility: hidden; /* Evita que el texto ocupe espacio antes de ser visible */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Transición suave */
+}
+
+  /* Mostrar el texto cuando el cursor pase por la imagen */
+.image-container:hover .overlay-text {
+    opacity: 8; /* Aparece el texto */
+    visibility: visible; /* Hace que el texto sea visible */
+}
+
+  /* Opcional: disminuir la opacidad de la imagen cuando se hace hover */
+.image-container:hover .bajada-logo {
+    opacity: 0.7; /* Baja la opacidad de la imagen al hacer hover */
+}
+
+
+
+
+.form-control.mb-2 {
+    font-size: 20px; /* Hace el texto aún más grande */
+    padding: 12px;
+}
+
+.mb-6.text-center {
+    color: #01304a; /* Color amarillo */
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre botones */
+    margin-top: 40px; /* Espacio arriba */
+}
+
+.btn-custom {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+/* color */
+.btn-solicitar {
+    background-color: #01304a; 
+    color: #f8bb49;
+}
+
+.btn-solicitar:hover {
+    background: linear-gradient(120deg, #01304a, #f8bb49);
+}
+.form-control:focus {
+    border-color: #f8bb49!important; /* Cambia el borde a naranja */
+    box-shadow: 0 0 30px #f8bb49!important; 
+    outline: none !important; /* Quita el contorno azul */
+}
