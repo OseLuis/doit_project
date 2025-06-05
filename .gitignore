@@ -1,0 +1,33 @@
+# Archivos de base de datos local
+db.sqlite3
+*.sqlite3
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+.env/
+
+# Archivos de caché de Python
+__pycache__/
+*.pyc
+*.pyd
+
+# Variables de entorno (si usas un archivo .env)
+.env
+
+# Archivos de logs
+*.log
+log.txt
+
+# Archivos de IDE (ej. VS Code)
+.vscode/ # Para ignorar la carpeta de configuración de VS Code
+.idea/ # Para ignorar la carpeta de configuración de PyCharm/IntelliJ
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de subida de medios si no están en otro storage (Django media files)
+/media/
+
+# Archivos de static collect (Django)
+/staticfiles/
